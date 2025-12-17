@@ -15,7 +15,7 @@ class StackQueueMini {
       sheep.nextLine();
     }//end for loop
     System.out.println("\nOriginal stack: ");
-    System.out.println("bottom of stack " + stack + " top of stack");
+    System.out.println("\nbottom of stack " + stack + " top of stack");
 
     //duplicating
     //new one to reverse then remove and add 2x
@@ -33,12 +33,14 @@ class StackQueueMini {
       stack.push(dupe);
     }//end while loop
 
+    System.out.println();
     System.out.println("\nDuplicated stack: ");
-    System.out.println("bottom of stack " + stack + " top of stack");
-
+    System.out.print("bottom of stack " + stack + " top of stack");
+    System.out.println();
 
   //PART 2
   Queue <Integer> queue = new LinkedList <Integer>();
+  System.out.println();
   for(int i=0; i<10; i++){
       System.out.print("Enter a number: ");
       int val = sheep.nextInt();
@@ -47,6 +49,29 @@ class StackQueueMini {
     }//end for loop
 
     System.out.println("\nOriginal queue: ");
-    System.out.println("bottom of queue " + queue + " top of queue");
-  } // end main
+    System.out.print("bottom of queue " + queue + " top of queue");
+    
+    //sorting for find odd numbers
+  Queue <Integer> tempQ = new LinkedList <Integer>(); 
+  while(queue.isEmpty()){
+    if(queue.peek() % 2 != 0){
+      int odd = queue.remove();
+      System.out.print(odd);    
+      tempQ.add(odd);    
+      }//end if
+    }//end while
+
+    while(!tempQ.isEmpty()){
+      int store = tempQ.remove();
+      queue.add(store);
+    }//end while
+
+  System.out.println("\nNew queue: ");
+  System.out.print("bottom of queue " + queue + " top of queue");
+  
+
+
+
+
+} // end main
 } // end class

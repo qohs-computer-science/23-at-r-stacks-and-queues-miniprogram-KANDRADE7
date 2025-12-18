@@ -24,8 +24,6 @@ class StackQueueMini {
       int stored = stack.pop();
       tempStack.push(stored);
     }// end while loop
-    System.out.println("\nReversed stack: ");
-    System.out.println("bottom of stack " + tempStack + " top of stack");
 
     while(!tempStack.isEmpty()){
       int dupe = tempStack.pop();
@@ -53,25 +51,21 @@ class StackQueueMini {
     
     //sorting for find odd numbers
   Queue <Integer> tempQ = new LinkedList <Integer>(); 
-  while(queue.isEmpty()){
+  for(int i = 0; i<=10;i++){
     if(queue.peek() % 2 != 0){
-      int odd = queue.remove();
-      System.out.print(odd);    
-      tempQ.add(odd);    
-      }//end if
+      int value = queue.remove();
+      tempQ.add(value);  
+    }//end if
+    else
+      queue.add(value);
     }//end while
 
-    while(!tempQ.isEmpty()){
-      int store = tempQ.remove();
-      queue.add(store);
+    while(tempQ.isEmpty()){
+      int thing = tempQ.remove();
+      queue.add(thing);
     }//end while
-
   System.out.println("\nNew queue: ");
   System.out.print("bottom of queue " + queue + " top of queue");
   
-
-
-
-
 } // end main
 } // end class

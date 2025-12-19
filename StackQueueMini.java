@@ -18,10 +18,10 @@ class StackQueueMini {
       stack.push(val);
       sheep.nextLine();
     }//end for loop
-    System.out.println("\nOriginal stack: bottom of stack -> " + stack + " <- top of stack");
+    System.out.println("\nOriginal stack: bottom of stack --> " + stack + " <-- top of stack");
 
     duplicate(stack);
-    System.out.println("\nDuplicated stack: bottom of stack -> " + stack + " <- top of stack");
+    System.out.println("\nDuplicated stack: bottom of stack --> " + stack + " <-- top of stack");
     System.out.println();
 
   //PART 2: queue
@@ -33,11 +33,9 @@ class StackQueueMini {
       queue.add(val);
   }//end for loop
 
-  System.out.println("\nOriginal queue: bottom of queue--> " + queue + " <-- top of queue");
-    
+  System.out.println("\nOriginal queue: bottom of queue --> " + queue + " <-- top of queue");
   evenOddQueue(queue);
   System.out.println("\nNew queue:  bottom of queue --> " + queue + " <-- top of queue");
-  
 }// end main
 
   public static void duplicate(Stack<Integer> stack){
